@@ -30,7 +30,7 @@ const MainLayout = () => {
     return (
         <div>
             <Navbar />
-            <div className="w-5/6 mx-auto min-h-[50vh]">
+            <div className="mx-auto min-h-[50vh]">
                 <Outlet />
             </div>
             <Footer />

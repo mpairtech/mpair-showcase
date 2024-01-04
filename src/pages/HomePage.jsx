@@ -7,13 +7,15 @@ import {
 } from "@/components/ui/accordion"
 import HeroSection from "@/sections/HeroSection";
 import GallerySection from "@/sections/GallerySection";
-import SecondSection from "@/sections/SecondSection";
+import Feature from "@/sections/Feature";
+import CallToAction from "@/sections/CallToAction";
 
 const HomePage = () => {
   return <div className="">
-          {/* <HeroSection /> */}
-          <SecondSection />
+          <HeroSection />
           <GallerySection />
+          <Feature />
+          <CallToAction />
   </div>;
 };
 
