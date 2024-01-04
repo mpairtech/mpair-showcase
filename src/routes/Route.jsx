@@ -4,6 +4,7 @@ import BookingPage from "@/pages/BookingPage";
 import HomePage from "@/pages/HomePage";
 import MainLayout from "@/layouts/MainLayout";
 import ContactPage from "@/pages/ContactPage";
+import ProcessPage from "@/pages/process/ProcessPage";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
                 element: <HomePage />,
             },
          
+            {
+                path: "/process",
+                element: <ProcessPage />,
+            },
             {
                 path: "/contact",
                 element: <ContactPage />,

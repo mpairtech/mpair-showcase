@@ -1,4 +1,5 @@
 import Footer from "@/components/shared/Footer";
+import MobileNav from "@/components/shared/MobileNav";
 import Navbar from "@/components/shared/Navbar";
 import React from "react";
 import { Outlet } from "react-router-dom";
@@ -30,6 +31,7 @@ const MainLayout = () => {
     return (
         <div>
             <Navbar />
+            <MobileNav />
             <div className="mx-auto min-h-[50vh]">
                 <Outlet />
             </div>
