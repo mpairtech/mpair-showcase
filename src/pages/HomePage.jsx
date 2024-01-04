@@ -9,11 +9,15 @@ import HeroSection from "@/sections/HeroSection";
 import GallerySection from "@/sections/GallerySection";
 import Feature from "@/sections/Feature";
 import CallToAction from "@/sections/CallToAction";
+import Services from "@/sections/services/Services";
+import ContactSection from "@/sections/contactsection/ContactSection";
 
 const HomePage = () => {
   return <div className="">
           <HeroSection />
           <GallerySection />
+          <Services />
+          <ContactSection />
           <Feature />
           <CallToAction />
   </div>;

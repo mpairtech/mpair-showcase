@@ -14,6 +14,7 @@ import {
 import { ActivitySquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { Button } from '../ui/button';
 
 const components = [
     {
@@ -56,77 +57,84 @@ const components = [
 const Navbar = () => {
     return (
         <div>
-            <div className="flex items-center justify-start gap-16 px-4 py-3 border-b mx-10">
-                <div className="flex items-center">
-                    <Link to="/" className="flex items-center space-x-2">
-                        <ActivitySquare />
-                        <span className="text-lg font-semibold">mPair Showcase</span>
-                    </Link>
-                </div>
-                <div className="flex items-center space-x-4">
-
-                    <NavigationMenu>
-                        <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                                        <li className="row-span-3">
-                                            <NavigationMenuLink asChild>
-                                                <a
-                                                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                                                    href="/"
-                                                >
-                                                    {/* <Icons.logo className="h-6 w-6" /> */}
-                                                    <ActivitySquare />
-                                                    <div className="mb-2 mt-4 text-lg font-medium">
-                                                        shadcn/ui
-                                                    </div>
-                                                    <p className="text-sm leading-tight text-muted-foreground">
-                                                        Beautifully designed components that you can copy and
-                                                        paste into your apps. Accessible. Customizable. Open
-                                                        Source.
-                                                    </p>
-                                                </a>
-                                            </NavigationMenuLink>
-                                        </li>
-                                        <ListItem href="/docs" title="Introduction">
-                                            Re-usable components built using Radix UI and Tailwind CSS.
-                                        </ListItem>
-                                        <ListItem href="/docs/installation" title="Installation">
-                                            How to install dependencies and structure your app.
-                                        </ListItem>
-                                        <ListItem href="/docs/primitives/typography" title="Typography">
-                                            Styles for headings, paragraphs, lists...etc
-                                        </ListItem>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                        {components.map((component) => (
-                                            <ListItem
-                                                key={component.title}
-                                                title={component.title}
-                                                href={component.href}
-                                            >
-                                                {component.description}
+            <div className="flex items-center justify-between gap-16 px-4 py-3 border-b mx-10">
+                <div className='flex gap-16'>
+                    <div className="flex items-center">
+                        <Link to="/" className="flex items-center space-x-2">
+                            <ActivitySquare />
+                            <span className="text-lg font-semibold">mPair Showcase</span>
+                        </Link>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                        <NavigationMenu>
+                            <NavigationMenuList>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                                            <li className="row-span-3">
+                                                <NavigationMenuLink asChild>
+                                                    <a
+                                                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                                                        href="/"
+                                                    >
+                                                        {/* <Icons.logo className="h-6 w-6" /> */}
+                                                        <ActivitySquare />
+                                                        <div className="mb-2 mt-4 text-lg font-medium">
+                                                            shadcn/ui
+                                                        </div>
+                                                        <p className="text-sm leading-tight text-muted-foreground">
+                                                            Beautifully designed components that you can copy and
+                                                            paste into your apps. Accessible. Customizable. Open
+                                                            Source.
+                                                        </p>
+                                                    </a>
+                                                </NavigationMenuLink>
+                                            </li>
+                                            <ListItem href="/docs" title="Introduction">
+                                                Re-usable components built using Radix UI and Tailwind CSS.
                                             </ListItem>
-                                        ))}
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <Link to="/docs" legacyBehavior passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        Documentation
-                                    </NavigationMenuLink>
-                                </Link>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
+                                            <ListItem href="/docs/installation" title="Installation">
+                                                How to install dependencies and structure your app.
+                                            </ListItem>
+                                            <ListItem href="/docs/primitives/typography" title="Typography">
+                                                Styles for headings, paragraphs, lists...etc
+                                            </ListItem>
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                            {components.map((component) => (
+                                                <ListItem
+                                                    key={component.title}
+                                                    title={component.title}
+                                                    href={component.href}
+                                                >
+                                                    {component.description}
+                                                </ListItem>
+                                            ))}
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link to="/docs" legacyBehavior passHref>
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                            Documentation
+                                        </NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                            </NavigationMenuList>
+                        </NavigationMenu>
+                    </div>
+                </div>
+
+                <div className="flex items-center">
+                    <Link to="/contact" className="flex items-center space-x-2">
+                        <Button>Contact us</Button>
+                    </Link>
                 </div>
             </div>
         </div>
