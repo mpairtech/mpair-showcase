@@ -11,6 +11,7 @@ import Feature from "@/sections/Feature";
 import CallToAction from "@/sections/CallToAction";
 import Services from "@/sections/services/Services";
 import ContactSection from "@/sections/contactsection/ContactSection";
+import Projects from "@/sections/projects/Projects";
 
 const HomePage = () => {
   return <div className="">
@@ -19,6 +20,7 @@ const HomePage = () => {
           <Services />
           <ContactSection />
           <Feature />
+          <Projects />
           <CallToAction />
   </div>;
 };

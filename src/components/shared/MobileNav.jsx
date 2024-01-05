@@ -28,8 +28,10 @@ const Header = ({
           <Zap className="h-6 w-6 fill-current text-white" />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href={"/contact"} invert={invert}>
+          <Button invert={invert}>
+            <Link to="/contact">
             Contact us
+            </Link>
           </Button>
           <button
             ref={toggleRef}
@@ -82,7 +84,7 @@ const NavigationItem = ({ href, children }) => {
 
 const Navigation = () => {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white ">
+    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/work">Our Work</NavigationItem>
         <NavigationItem href="/about">About Us</NavigationItem>
@@ -116,7 +118,7 @@ const MobileNav = () => {
   }, []);
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
-      <header  className="lg:hidden">
+      <header  className="block lg:hidden xl:hidden">
         <div
           className="absolute left-0 right-0 top-2 z-40 pt-14 "
           aria-hidden={expanded ? "true" : undefined}
@@ -139,13 +141,13 @@ const MobileNav = () => {
         <motion.div
           layout
           id={panelId}
-          style={{ height: expanded ? "auto" : "0.5rem" }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2 "
+          style={{ height: expanded ? "auto" : "0.01rem" }}
+          className="relative z-50 overflow-hidden bg-neutral-950"
           aria-hidden={expanded ? undefined : "true"}
           inert={expanded ? undefined : ""}
         >
           <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
+            <div ref={navRef} className="bg-neutral-950 pb-16 pt-16">
               <Header
                 invert
                 panelId={panelId}

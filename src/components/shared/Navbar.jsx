@@ -56,7 +56,7 @@ const components = [
 
 const Navbar = () => {
     return (
-        <div  className="md:hidden lg:block">
+        <div  className="hidden lg:block xl:block">
             <div className="flex items-center justify-between gap-16 px-4 py-3 border-b mx-10">
                 <div className='flex gap-16'>
                     <div className="flex items-center">
@@ -122,7 +122,7 @@ const Navbar = () => {
                                 <NavigationMenuItem>
                                     <Link to="/process" legacyBehavior passHref>
                                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                            Documentation
+                                            Our Process
                                         </NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
