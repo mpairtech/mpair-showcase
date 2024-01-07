@@ -10,7 +10,7 @@ const GalleryCard = ({ element }) => {
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="absolute bottom-8 whitespace-nowrap text-5xl font-navFont gallery-card-title">
+      <div className="absolute bottom-8 whitespace-nowrap text-3xl font-thin font-navFont gallery-card-title">
         {element.title}
       </div>
     </div>

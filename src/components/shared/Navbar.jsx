@@ -15,7 +15,7 @@ import { ActivitySquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
-
+import { Phone } from 'lucide-react';
 const components = [
     {
         title: "Alert Dialog",
@@ -133,7 +133,12 @@ const Navbar = () => {
 
                 <div className="flex items-center">
                     <Link to="/contact" className="flex items-center space-x-2">
-                        <Button>Contact us</Button>
+                        <Button>
+                        <Phone size={18}/>
+                        <span className='ms-2'>
+                        Contact us 
+                        </span>
+                        </Button>
                     </Link>
                 </div>
             </div>

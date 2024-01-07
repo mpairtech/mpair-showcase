@@ -13,14 +13,13 @@ const Feature = () => {
       <Container>
         <div className="max-w-2xl mx-auto lg:mx-0 lg:max-w-3xl">
           <Title
-            title="Every feature you need to win. Try it for yourself."
+            title="Ship it like you own it"
             className="text-white text-2xl"
           />
           <p className="mt-2 text-lg text-gray-400">
-            Chad-AI was built for investors like you who play by their own rules
-            and are not going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Chad-AI has
-            it.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+            cupiditate voluptate officiis incidunt, accusamus voluptatibus
+            voluptatem, quia, quos doloribus quibusdam quod.
           </p>
         </div>
       </Container>

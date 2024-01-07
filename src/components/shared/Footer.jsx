@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Zap } from 'lucide-react'
+import { Zap, Send } from 'lucide-react'
 import FooterNavigation from "./FooterNavigation";
 import Container from "./Container";
 import FadeIn from "@/sections/services/FadeIn";
@@ -43,7 +43,7 @@ const NewsletterForm = () => {
             aria-label="Submit"
             className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
           >
-            <Zap className="w-4" />
+            <Send className="w-4" />
           </button>
         </div>
       </div>
@@ -66,7 +66,7 @@ const Footer = () => {
             <Zap className="w-6 h-6 text-neutral-950" />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            ©  mPair Technologies Ltd. {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

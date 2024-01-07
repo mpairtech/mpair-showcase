@@ -15,13 +15,12 @@ const CallToAction = () => {
       <Container className="relative">
         <div className="mx-auto max-w-md sm:text-center">
           <Title
-            title="Get your first tips today"
+            title="loreem ipsum dolor sit amet"
             className="text-3xl text-white sm:text-4xl"
           />
           <p className="mt-4 text-lg text-gray-300">
-            It takes 30 seconds to sign up. Download the app and create an
-            account today and we will send you a tip guaranteed to double your
-            first investment.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+            cupiditate voluptate officiis incidunt.
           </p>
         </div>
       </Container>

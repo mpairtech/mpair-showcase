@@ -18,9 +18,9 @@ const HomePage = () => {
           <HeroSection />
           <GallerySection />
           <Services />
+          <Projects />
           <ContactSection />
           <Feature />
-          <Projects />
           <CallToAction />
   </div>;
 };

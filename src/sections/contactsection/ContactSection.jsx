@@ -3,7 +3,7 @@ import React from "react";
 import FadeIn from "../services/FadeIn";
 import Container from "../services/Container";
 import Offices from "./Offices";
-
+import { Phone } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -14,8 +14,9 @@ const ContactSection = () => {
             Tell us about your project
           </h2>
           <div className="mt-6 flex">
-            <Button href={"/contact"} invert>
-              Say Hello
+            <Button variant="outline">
+              <Phone size={18}/>
+              <span className="ml-2">Say Hello</span>
             </Button>
           </div>
           <div className="mt-10 border-t border-white/10 pt-10">
